@@ -42,7 +42,8 @@
 				<img src="quentin.jpg" alt="...">
 				<div class="caption">
 					<h3 id="heroes2">Nom du hero:</h3>
-					<h3 id="life2" class="glyphicon glyphicon-heart">Vie du Hero:</h3>
+					<h3 id="life2" class="glyphicon glyphicon-heart">Vie du Hero:</h3> &nbsp
+					<h3 id="shield1" class="glyphicon glyphicon glyphicon-leaf">armor</h3>
 
 				</div>
 			</div>
@@ -62,8 +63,8 @@
 				<img src="mich.jpg" alt="...">
 				<div class="caption">
 					<h3 id="heroes1">Nom du hero:</h3>
-					<h3 id="life1" class="glyphicon glyphicon-heart">Vie du Hero:</h3>
-
+					<h3 id="life1" class="glyphicon glyphicon-heart">Vie du Hero:</h3> &nbsp
+					<h3 id="shield" class="glyphicon glyphicon glyphicon-leaf">armor</h3>
 				</div>
 			</div>
 		</div>
@@ -71,19 +72,37 @@
 	<div class="row-fluid">
 
 		<div class="col-sm-6 col-md-4 jumbotron">
+
 			<p class="btn btn-danger btn-lg btn-block" type="submit" role="button" onclick="attackQuentin()">Attack</p>
 			<p class="btn btn-primary btn-lg btn-block" type="submit" role="button" onclick="healQuentin()">Heal</p>
 			<p class="btn btn-success btn-lg btn-block" type="submit" role="button" onclick="boostQuentin()">boost</p>
+			<p class="btn btn-warning btn-lg btn-block" type="submit" role="button" onclick="shieldQuentin()">Shield</p>
 		</div>
 		<div class="col-sm-6 col-md-4 text-center thumbnail">
 			<h2 id="round">Press start
 			</h2>
+			<div id="item1" class="col-sm-6 col-md-6 text-center thumbnail">
+				<h3>item:</h3>
+				<p onclick="addDpsQuentin()" class="btn btn-danger btn-lg btn-block">+8 DPS</p>
+				<p onclick="addHealQuentin()" class="btn btn-primary btn-lg btn-block">+5 heal</p>
+				<p onclick="addLifeQuentin()" class="btn btn-success btn-lg btn-block">+25 life</p>
+				<p onclick="addShieldQuentin()" class="btn btn-warning btn-lg btn-block">+3 shield</p>
+			</div>
+			<div id="item2" class="col-sm-6 col-md-6 text-center thumbnail">
+				<h3>item:</h3>
+				<p onclick="addDpsMichel()" class="btn btn-danger btn-lg btn-block">+8 DPS</p>
+				<p onclick="addHealMichel()" class="btn btn-primary btn-lg btn-block">+5 heal</p>
+				<p onclick="addLifeMichel()" class="btn btn-success btn-lg btn-block">+25 life</p>
+				<p onclick="addShieldMichel()" class="btn btn-warning btn-lg btn-block">+3 shield</p>
+			</div>
 		</div>
 
 		<div class="col-sm-6 col-md-4 jumbotron">
 			<p class="btn btn-danger btn-lg btn-block" type="submit" role="button" onclick="attackMichel()">Attack</p>
 			<p class="btn btn-primary btn-lg btn-block" type="submit" role="button" onclick="healMichel()">Heal </p>
 			<p class="btn btn-success btn-lg btn-block" type="submit" role="button" onclick="boostMichel()">boost</p>
+			<p class="btn btn-warning btn-lg btn-block" type="submit" role="button" onclick="shieldMichel()">Shield</p>
+
 
 		</div>
 
