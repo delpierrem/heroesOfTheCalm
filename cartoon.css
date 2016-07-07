@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Ma Super Fonte";
+    src: url('FunSized.ttf');
+}
+body {
+    font-family: "Ma Super Fonte";
+}
