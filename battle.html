@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Heroes of the calm</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/cartoon.css">
+	<script src="jquery.js"></script>
+</head>
+
+<body>
+	<div class="jumbotron text-center">
+		<h1>Heroes of the calm</h1>
+	</div>
+
+	<div class="row-fluid text-center">
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<div class="" id="player2img">
+					<img src="mystery.jpg" alt="...">
+				</div>
+				<div class="caption">
+					<h3 id="heroes2">Nom du hero:</h3>
+					<h3 id="life2" class="glyphicon glyphicon-heart">Vie du Hero:</h3> &nbsp
+					<h3 id="shield1" class="glyphicon glyphicon glyphicon-leaf">armor</h3>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-4 jumbotron text-center">
+			<h2>DPS de player 2</h2>
+			<p id="dmg2">0 DPS</p>
+
+			<p class="btn btn-primary" type="submit" role="button" onclick="reset()">Reset</p>
+			<p class="btn btn-primary" type="submit" role="button" onclick="getcanPlay()">start</p>
+			<h2>DPS de player1</h2>
+			<p id="dmg1">0 DPS
+			</p>
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<div class="" id="player1img">
+					<img src="mystery.jpg" alt="...">
+				</div>
+				<div class="caption">
+					<h3 id="heroes1">Nom du hero:</h3>
+					<h3 id="life1" class="glyphicon glyphicon-heart">Vie du Hero:</h3> &nbsp
+					<h3 id="shield" class="glyphicon glyphicon glyphicon-leaf">armor</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row-fluid">
+
+		<div class="col-sm-6 col-md-4 jumbotron">
+
+			<p class="btn btn-danger btn-lg btn-block" type="submit" role="button" onclick="attackplayer2()">Attack</p>
+			<p class="btn btn-primary btn-lg btn-block" type="submit" role="button" onclick="healplayer2()">Heal</p>
+			<p class="btn btn-success btn-lg btn-block" type="submit" role="button" onclick="boostplayer2()">boost</p>
+			<p class="btn btn-warning btn-lg btn-block" type="submit" role="button" onclick="shieldplayer2()">Shield</p>
+		</div>
+		<div class="col-sm-6 col-md-4 text-center thumbnail">
+			<h2 id="round">Press start
+			</h2>
+			<div id="item1" class="col-sm-6 col-md-6 text-center thumbnail">
+				<h3>item:</h3>
+				<p onclick="addDpsplayer2()" class="btn btn-danger btn-lg btn-block">+8 DPS</p>
+				<p onclick="addHealplayer2()" class="btn btn-primary btn-lg btn-block">+5 heal</p>
+				<p onclick="addLifeplayer2()" class="btn btn-success btn-lg btn-block">+25 life</p>
+				<p onclick="addShieldplayer2()" class="btn btn-warning btn-lg btn-block">+3 shield</p>
+			</div>
+			<div id="item2" class="col-sm-6 col-md-6 text-center thumbnail">
+				<h3>item:</h3>
+				<p onclick="addDpsplayer1()" class="btn btn-danger btn-lg btn-block">+8 DPS</p>
+				<p onclick="addHealplayer1()" class="btn btn-primary btn-lg btn-block">+5 heal</p>
+				<p onclick="addLifeplayer1()" class="btn btn-success btn-lg btn-block">+25 life</p>
+				<p onclick="addShieldplayer1()" class="btn btn-warning btn-lg btn-block">+3 shield</p>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-4 jumbotron">
+			<p class="btn btn-danger btn-lg btn-block" type="submit" role="button" onclick="attackplayer1()">Attack</p>
+			<p class="btn btn-primary btn-lg btn-block" type="submit" role="button" onclick="healplayer1()">Heal </p>
+			<p class="btn btn-success btn-lg btn-block" type="submit" role="button" onclick="boostplayer1()">boost</p>
+			<p class="btn btn-warning btn-lg btn-block" type="submit" role="button" onclick="shieldplayer1()">Shield</p>
+
+
+		</div>
+
+	</div>
+
+
+</body>
+
+<script src="script/battle.js"></script>
+
+</html>
