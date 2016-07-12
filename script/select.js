@@ -1,6 +1,6 @@
 var tablepop = ['Michel', 'Quentin', 'Jordan', 'Victor', "Kevin", "Tristan",
-    "Baptiste", "Daniel", "FrançoisF", "Axel", "Antoine", "Bonsergent", "JessiCat",
-    "Jessy", "Julie", "Kylian", "Hao", "Manon", "Paul", "El Pietro", "Raphaë", "Thimoty",
+    "Baptiste", "Daniel", "FrancoisF", "Axel", "Antoine", "Bonsergent", "JessiCat",
+    "Jessy", "Julie", "Kylian", "Hao", "Manon", "Paul", "El Pietro", "Raphael", "Thimoty",
 ];
 var i = 0;
 var a = 0;

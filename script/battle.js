@@ -30,6 +30,8 @@ var canPlay;
 
 document.getElementById("heroes1").innerHTML = player1.pseudo;
 document.getElementById("life1").innerHTML = player1.life;
+document.getElementById("dpsPlayer1").innerHTML = 'dps de ' + player1.pseudo;
+document.getElementById("dpsPlayer2").innerHTML = 'dps de ' + player2.pseudo;
 document.getElementById("heroes2").innerHTML = player2.pseudo;
 document.getElementById("life2").innerHTML = player2.life;
 // need to correct heal with canPlay
@@ -41,7 +43,7 @@ var healplayer2 = function() {
         var hp = player2.itemHeal + player2.life + player2.heal;
         player2.life = hp;
         document.getElementById("life2").innerHTML = hp;
-        document.getElementById("round").innerHTML = "player1 it's your round";
+        document.getElementById("round").innerHTML = player1.pseudo + "it's your round";
         canPlay++;
     }
 };
@@ -54,7 +56,7 @@ var healplayer1 = function() {
         var hp2 = player1.itemHeal + player1.life + player1.heal;
         player1.life = hp2;
         document.getElementById("life1").innerHTML = hp2;
-        document.getElementById("round").innerHTML = "player2 it's your round";
+        document.getElementById("round").innerHTML = player2.pseudo + "it's your round";
         canPlay--;
     }
 };
@@ -67,7 +69,7 @@ var attackplayer1 = function() {
         var hp = (player2.life + player2.shield) - player1.dmg;
         player2.life = hp;
         document.getElementById("life2").innerHTML = hp;
-        document.getElementById("round").innerHTML = "player2 it's your round";
+        document.getElementById("round").innerHTML = player2.pseudo + " it's your round";
         canPlay--;
         if (player2.life <= 0) {
             window.alert("player1 win");
@@ -85,7 +87,7 @@ var attackplayer2 = function() {
         var hp2 = (player1.life + player1.shield) - player2.dmg;
         player1.life = hp2;
         document.getElementById("life1").innerHTML = hp2;
-        document.getElementById("round").innerHTML = "player1 it's your round";
+        document.getElementById("round").innerHTML = player1.pseudo + " it's your round";
         canPlay++;
         if (player1.life <= 0) {
             window.alert("player2 win");
@@ -100,7 +102,7 @@ var boostplayer2 = function() {
     if (player1.life > 0 && player2.life > 0 && canPlay == 1) {
         var boost = player2.boost + Math.floor(Math.random() * 10) + 1;
         player2.boost = boost;
-        document.getElementById("round").innerHTML = "player1 it's your round";
+        document.getElementById("round").innerHTML = player1.pseudo + " it's your round";
         canPlay++;
     }
 };
@@ -109,7 +111,7 @@ var boostplayer1 = function() {
     if (player2.life > 0 && player1.life > 0 && canPlay == 2) {
         var boosted = player1.boost + Math.floor(Math.random() * 10) + 1;
         player1.boost = boosted;
-        document.getElementById("round").innerHTML = "player2 it's your round";
+        document.getElementById("round").innerHTML = player2.pseudo + " it's your round";
         canPlay--;
     }
 };
@@ -118,7 +120,7 @@ var shieldplayer2 = function() {
     if (player2.life > 0 && player1.life > 0 && canPlay == 1) {
         var shield = player2.shield + Math.floor(Math.random() * 5) + 1;
         player2.shield = player2.itemShield + shield;
-        document.getElementById("round").innerHTML = "player1 it's your round";
+        document.getElementById("round").innerHTML = player1.pseudo + " it's your round";
         document.getElementById("shield1").innerHTML = player2.shield;
         canPlay++;
     }
@@ -128,7 +130,7 @@ var shieldplayer1 = function() {
     if (player1.life > 0 && player2.life > 0 && canPlay == 2) {
         var shield1 = player1.shield + Math.floor(Math.random() * 5) + 1;
         player1.shield = player1.itemShield + shield1;
-        document.getElementById("round").innerHTML = "player2 it's your round";
+        document.getElementById("round").innerHTML = player2.pseudo + " it's your round";
         document.getElementById("shield").innerHTML = player1.shield;
         canPlay--;
     }
@@ -190,9 +192,9 @@ function addShieldplayer2() {
 function getcanPlay() {
     canPlay = Math.floor(Math.random() * 2) + 1;
     if (canPlay == 1) {
-        document.getElementById("round").innerHTML = "player2 it's your round";
+        document.getElementById("round").innerHTML = player2.pseudo + " it's your round";
     } else if (canPlay == 2) {
-        document.getElementById("round").innerHTML = "player1 it's your round";
+        document.getElementById("round").innerHTML = player1.pseudo + " it's your round";
     }
     return canPlay;
 }
